@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title></title>
+</head>
+
+<body>
+  <input type="text" id="value">
+    <button type="button" onclick="fab()" >Click me</button>
+    <p id="demo"></p>
+    
+    <script type="text/javascript">
+    //  document.getElementById('demo').onclick=function(){fab(5)}
+      function fab()
+      {
+        let textbox=document.getElementById('value');
+        let title=textbox.value;
+    
+        let a=0;
+        let b=1;
+        let c;
+        document.write(a)
+        document.write(b)
+        for(let i=2;i<=title;i++){
+          c=a+b
+          document.write(c)
+          a=b
+          b=c
+        }
+      } 
+  </script>
+</body>
+</html>
