@@ -1,0 +1,427 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+  background-color: black;
+  color: #fff;
+  
+}
+header {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding: 26px 20px;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+@media screen and (min-width: 550px) and (max-width:526px) {
+  header {
+    padding: 26px 56px;
+  }
+}
+header a.logo {
+  display: block;
+}
+header .logo img {
+  height: 47px;
+  padding-left: 15%;
+  width: 106%;
+}
+@media screen and (min-width: 550px) {
+  header.logo img {
+    height: 67px;
+  }
+}
+header div + div {
+  text-align: right;
+}
+header a.button {
+  background-color: #e50914;
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 17px;
+  border-radius: 3px;
+}
+header select {
+  background: transparent;
+  color: #fff;
+  padding: 6px 0 6px 20px;
+  border-radius: 3px;
+}
+header div.select {
+  display: inline-block;
+  margin-right: 30px;
+}
+@media screen and (min-width: 550px) {
+  header div.select {
+    margin-right: 30px;
+  }
+}
+header div.select svg {
+  height: 20px;
+  fill: #fff;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 5px;
+}
+
+div.splash {
+  position: relative;
+}
+div.splash div.gradient {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), 100%);
+  position: absolute;
+  inset: 0;
+}
+div.splash div.background {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+}
+div.splash div.background img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  object-fit: cover;
+}
+div.splash div.content {
+  padding: 221px 20px;
+  max-width: 755px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+div.splash h1,
+div.splash h2,
+div.splash h3 {
+  font-weight: normal;
+}
+div.splash h1 {
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+div.splash h2 {
+  font-size: 1.125rem;
+  margin-top: 13px;
+  margin-bottom: 29px;
+}
+div.splash h3 {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 550px) {
+  div.splash h1 {
+    font-size: 3.125rem;
+    font-weight: bold;
+  }
+  div.splash h2 {
+    font-size: 1.625rem;
+    margin-top: 13px;
+    margin-bottom: 29px;
+  }
+  div.splash h3 {
+    font-size: 1.2rem;
+  }
+}
+div.cta form {
+  display: grid;
+  margin: 20px 20px 0;
+  position: relative;
+  grid-template-columns: 1fr;
+  row-gap: 15px;
+}
+@media screen and (min-width: 550px) {
+  div.cta form {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+  }
+}
+div.cta input {
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+div.cta input ~ span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  z-index: 3;
+  color: #aaa;
+  transition: all 0.15s ease;
+  pointer-events: none;
+}
+div.cta input:focus {
+  padding-top: 14px;
+  padding-bottom: 6px;
+}
+div.cta input:focus ~ span {
+  top: 8px;
+  font-size: 0.8rem;
+}
+div.cta button {
+  font-size: 1rem;
+  padding: 8px 26px;
+  background-color: #e50914;
+  color: #fff;
+  border: 0;
+}
+@media screen and (min-width: 550px) {
+  div.cta button {
+    font-size: 1.624rem;
+    padding: 8px 26px;
+    border-radius: 0;
+  }
+}
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 46px;
+  padding: 70px 35px;
+  align-items: center;
+  border-top: 8px solid #222;
+  text-align: center;
+}
+
+@media screen and (min-width: 550px) {
+  section {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    align-self: center;
+    padding-left: 21%;
+    padding-right: 17%;
+  }
+}
+section div.texts h1 {
+  font-size: 3.125rem;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 550px) {
+  section div.texts h1 {
+    font-size: 2.625rem;
+  }
+}
+section div.texts p {
+  font-size: 1rem;
+}
+@media screen and (min-width: 550px) {
+  section div.texts p {
+    font-size: 1.625rem;
+  }
+}
+.media {
+  position: relative;
+}
+.media.s1 img {
+  width: 400px;
+}
+.media.s1 video {
+  width: 74%;
+  position: absolute;
+  top: 60px;
+  left: 53px;
+  margin-left: -2%;
+  margin-top: -3%;
+}
+
+section:nth-child(even) div.texts {
+  order: 2;
+}
+@media screen and (min-width: 550px) {
+  section:nth-child(even) div.texts {
+    order: 2;
+  }
+}
+section div.download {
+  border: 2px solid #666;
+  border-radius: 15px;
+  padding: 10px;
+  height: 95px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  width: 339px;
+  left: 25%;
+  background-color: black;
+  margin-left: -140px;
+  gap: 15px;
+  grid-template-columns: max-content 1fr max-content;
+}
+section div.download img.cover {
+  top: 9px;
+  height: 59px;
+  width: auto;
+}
+section div.download img.gif {
+  height: 66px;
+}
+.media.s3 img {
+  width: 400px;
+  position: relative;
+  z-index: 5;
+}
+.media.s3 video {
+  width: 46%;
+  position: absolute;
+  top: 20px;
+  left: 82px;
+  margin-left: -3%;
+}
+
+div.faq {
+  padding: 70px 30px;
+}
+div.faq h1 {
+  font-size: 1.625rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 550px) {
+  div.faq h1 {
+    font-size: 2.125rem;
+  }
+}
+
+
+div.faq{
+  padding: 70px 30px;
+}
+div.faq h1{
+  font-size: 1.625rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (min-width:550px) {
+  div.faq h1{
+      font-size: 3.125rem;
+  }
+}
+div.questions{
+  max-width:47%;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+@media screen and (min-width:550px) {
+  div.questions{
+      font-size: 1.625rem;
+  }
+}
+div.question{
+  position:relative;
+  background-color: #303030;
+  margin-bottom: 10px;
+}
+div.question svg{
+  width: 30px;
+  height: 30px;
+  right:30px;
+  top:20px;
+  position:absolute;
+  transform: rotate(45deg);
+  transition: all 0.2s ease;
+}
+div.question .header{
+  display:block;
+  padding: 20px 30px;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+div.question div.answer{
+  padding: 0 30px;
+  max-height:0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+div.question input[type="checkbox"]{
+  display: none;
+}
+div.question input[type="checkbox"]:checked ~ div.answer{
+  padding: 30px 30px;
+  max-height:600px;
+}
+div.question input[type="checkbox"]:checked ~ .header svg{
+  transform: rotate(180deg);
+}
+div.faq h3{
+  font-weight: normal;
+  text-align: center;
+  margin: 40px 0 20px;
+}
+div.faq form{
+  max-width:635px;
+  margin: 0 auto;
+}
+div.faq form div + div{
+  text-align: center;
+}
+
+
+
+.grid{
+  padding: 0;
+  margin: 0;
+}
+.foot{
+  padding: 5%;
+  padding-inline: 10%;
+  font-size: 90%;
+  font-weight: 360;
+}
+.foot h5{
+  font-size:1.125rem;
+  font-weight: 360;
+  padding-left:24%;
+  color:rgb(113, 111, 111);
+  padding-bottom: 1.5%;
+
+}
+
+table{
+  padding-left: 23%;
+  padding-right: 1%;
+  width:75%;
+  border-spacing:20px;
+}
+tr{
+  gap: 100%;
+
+}
+footer select {
+  background: transparent;
+  color: rgb(113, 111, 111);
+  padding: 6px 0 6px 20px;
+  border-radius: 3px;
+}
+footer div.select {
+  display: inline-block;
+  margin-right: 30px;
+  padding-left: 24%;
+}
+@media screen and (min-width: 550px) {
+  footer div.select {
+    margin-right: 30px;
+  }
+}
+footer div.select svg {
+  height: 20px;
+  fill: rgb(113, 111, 111);
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 5px;
+}
+.india{
+  padding-left:24%;
+  padding-top: 2%;
+  color:rgb(113, 111, 111);
+
+}
