@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+<div class="container-fluid mt-3 p-1  " style="background-color:#D3CEDD;">
+  <h1 class="text-center">Create User </h1>
+</div>
+<div class="container">
+ 
+    <form action="/create" method="POST">
+      <a class="btn btn-primary mt-3 mb-3" href="/">All Users</a>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Course Name</label>
+        <input type="text" name = "Coursename" class="form-control" placeholder="Course Name">
+        
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Course Duration</label>
+        <input type="text" name = "duration" class="form-control" placeholder="Course Duration">
+        
+      </div>
+     <div class="form-group">
+        <label for="exampleInputEmail1">Course Fees</label>
+        <input type="text"  name = "fees" class="form-control" placeholder="Course Fees">
+        
+      </div>
+      <button type="submit" class="btn btn-primary mt-5">Create User</button>
+    </form>
+    </div>

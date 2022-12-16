@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<div class="container-fluid mt-3 p-1  " style="background-color:#D3CEDD;">
+  <h1>Edit user</h1>
+
+ </div>
+
+<div class="container">
+  
+      <form action="/update/<%= data.id%>" method="POST">
+        <a class="btn btn-primary mt-3 mb-3" href="/">Users</a>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Course Name</label>
+          <input type="text" name = "Coursename" class="form-control" value="<%= data.Coursename %>" placeholder="Course Name">
+          
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Course Duration</label>
+          <input type="text" name = "duration" class="form-control" value="<%= data.duration%>" placeholder="Course Duration">
+          
+        </div>
+       <div class="form-group">
+          <label for="exampleInputEmail1">Course Fees</label>
+          <input type="text"  name = "fees" class="form-control" value="<%= data.fees%>" placeholder="Course Fees">
+          
+        </div>
+        <button type="submit" class="btn btn-primary mt-5">Edit User</button>
+      </form>
+      </div>

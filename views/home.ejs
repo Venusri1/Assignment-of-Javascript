@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+  <div class="container-fluid mt-3 p-1  " style="background-color:rgb(145, 181, 202);">
+    <h2 class="mt-4 text-center "> Course Management Application</h2>
+  </div>
+  <div class="container mt-5">
+
+    <table class="table table-borderless table-striped ">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Course Duration</th>
+          <th scope="col">Course Fees</th>
+          <th scope="col">Users Updation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(data.length){
+          for(var i = 0; i < data.length; i++)
+           {%>
+        <tr>
+          <th scope="row"><%= data[i].id%></th>
+          <td><%= data[i].Coursename%></td>
+          <td><%= data[i].duration%></td>
+          <td><%= data[i].fees%></td>
+          <td>
+            <a href="/edit/<%= data[i].id%>" class="btn" data-toggle="button" style="background-color: #4B878BFF;">Edit</a>
+            <a href="/delete/<%= data[i].id%>" class="btn" data-toggle="button" style="background-color: #D01C1FFF;"> Delete</a>
+          </td>
+        </tr>
+        <% }
+      }else{ %>
+           <tr>
+              <td colspan="5">No user</td>
+           </tr>
+           <% } %>
+         
+      </tbody>
+    </table>
+    <a href="/create" class="btn mt-4 " style="background-color: rgb(107, 167, 230)">Createuser</a>
+
+
+</div>
